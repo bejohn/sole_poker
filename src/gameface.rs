@@ -254,14 +254,15 @@ fn is_straight(val_hash:HashMap<u32, u32>) -> bool{
     }
     val.sort();
 
-    if val.len() < 5{
+    let val_len = val.len();
+    if val_len < 5{
         return false;
     } else {
         for j in 0..3{
-            if j == 1 && val.len() == 5 {
+            if j == 1 && val_len == 5 {
                 return false;
             }
-            if j == 2 && val.len() == 6 {
+            if j == 2 && val_len == 6 {
                 return false;
             }
             if val[j+1] == (val[j] + 1) &&
@@ -270,10 +271,10 @@ fn is_straight(val_hash:HashMap<u32, u32>) -> bool{
                val[j+4] == (val[j+3] +1) {
                return true;
             }
-            if val[j] == 10 &&
-                val[j+1] == 11 &&
-                val[j+2] == 12 &&
-                val[j+3] == 13 &&
+            if val[val_len - 4] == 10 &&
+                val[val_len - 3] == 11 &&
+                val[val_len - 2] == 12 &&
+                val[val_len - 1] == 13 &&
                 val[0] == 1 {
                     return true;
             }
