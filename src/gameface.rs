@@ -68,7 +68,7 @@ pub fn game(){
         //input_txt = String::from("");
         let dirns = format!("{}","\n--- Dealer's cards ▲▲▲---\n--- Your cards ▼▼▼---\n".yellow());
         for round in 0..3{
-            std::process::Command::new("cl").status().expect("Could not clear");
+            std::process::Command::new("clear").status().expect("Could not clear");
 
             let top_display = format!("\n Total chips: {}   Bet limit: {}    Total bet: {} \n\n", total_chips, bet_limit, total_bet);
             println!("   {}", top_display.yellow().bold().on_black());
@@ -117,7 +117,7 @@ pub fn game(){
             }
 
         }
-        std::process::Command::new("cl").status().expect("Could not clear");
+        std::process::Command::new("clear").status().expect("Could not clear");
 
         show_dealer(5);
         println!("{}",dirns);

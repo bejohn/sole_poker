@@ -16,7 +16,7 @@ pub fn print_front(){
         wid = 0_usize;
         ht = 0_usize;
     }
-    std::process::Command::new("cl").status().unwrap();
+    std::process::Command::new("clear").status().unwrap();
 
     let wordings =format!("{}",
 "                                                                                                                                                                               SOLITARE POKER                                                                                                                        ================                                                                                                                                                                                                                           Rules:                                                                                                                                                                                                                                                                        -You are given $100 as chips(Total Chips)                                                                                              -You can play several rounds of poker in which you place bets                                                                          -Each round gives you three chances of betting                                                                                            1. shows you your cards and hides all five of the dealer                                                                               2. shows you one of the dealer's cards                                                                                                 3. shows you two of the five dealer's cards                                                                                            Finally all cards are revealed, but no betting can take place at this stage                                                         -At the first chance, you can bet upto a max of your total chips                                                                       -At subsequent chances, you can bet you to a max of minimum among remaining chips or the bet amount for the last chance                -After all betting, you can get back your winning based on your total bet for the round:                                                  For DOUBLE, 80% of total bet                                                                                                           For DOUBLE DOUBLES, 100% of total bet                                                                                                  For THREE OF A KIND, 120% of total bet                                                                                                 For FULL HOUSE, 150% of total bet                                                                                                      For STRAIGHT, 160% of total bet                                                                                                        For FOUR OF A KIND, 180% of total bet                                                                                                  For FLUSH, 200% of total bet                                                                                                           For None of the above, you lose all the bet amount                                                                                                                                                                                                                            To win, you need 200 or above in total chips                                                                                           If you have 10 or below in total chips, you lose                                                                                                                                                                                                                              To exit game, type \"quit\" instead of a bet                                                                                   ");
@@ -40,7 +40,7 @@ pub fn you_win(){
    .read_line(&mut enter)
    .unwrap();
 
-   std::process::Command::new("cl").status().unwrap();
+   std::process::Command::new("clear").status().unwrap();
 }
 
 pub fn you_lose(){
@@ -54,6 +54,6 @@ pub fn you_lose(){
    .read_line(&mut enter)
    .unwrap();
 
-   std::process::Command::new("cl").status().unwrap();
+   std::process::Command::new("clear").status().unwrap();
 }
 
